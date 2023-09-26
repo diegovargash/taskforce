@@ -1,8 +1,8 @@
 style.css
 {
     margin: 0;
-    padding: 0
-    box-sizing border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -36,7 +36,7 @@ form button {
     color: #d88771; 
     background: white;
     cursor: pointer;
-    transition: all 0.3s ease ;
+    transition: all 0.3s ease;
 }
 
 form button:hover{ 
@@ -107,7 +107,7 @@ select{
     -moz-appearance: none;
     appearance: none;
     outline: none;
-    border: none;
+    border: none; 
 }
 
 .select {
@@ -123,7 +123,7 @@ select{
     padding: 1rem;
 }
 
-.select::after{
+.select::after {
     content: "\25BC";
     position:absolute;
     background: #ff6f47;
@@ -131,9 +131,10 @@ select{
     right: 0;
     padding: 1rem;
     pointer-events: none;
+    transition: all 0.3s ease;
 }
 
-.select:hover::after{
+.select:hover::after {
      background: white;
      color: #ff6f47;
 }

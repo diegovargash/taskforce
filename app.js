@@ -6,7 +6,7 @@ const filterOption = document.querySelector(".filter-todo");
 document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
-filterOption.addEventListener("click",filterTodo);
+filterOption.addEventListener("click", filterTodo);
 
 function addTodo(event) {
     
@@ -16,10 +16,10 @@ function addTodo(event) {
     todoDiv.classList.add("todo");
 
     const newTodo = document.createElement("li");
-    newTodo.innerText = todoInput.value; 
+    newTodo.innerText = todoInput.value;  
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
-
+ 
     saveLocalTodos(todoInput.value);
 
     const completedButton = document.createElement("button");
@@ -56,8 +56,8 @@ function deleteCheck(e) {
 
 function filterTodo(e) {
     const todos = todoList.childNodes;    
-    todos.forEach(function(todo){
-         switch(e.target.value){
+    todos.forEach(function(todo) {
+         switch(e.target.value) {
             case "all": 
                 todo.style.display = "flex";
                 break;
@@ -91,14 +91,14 @@ function saveLocalTodos(todo){
     localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-function getTodos(){
+function getTodos() {
     let todos;
     if(localStorage.getItem("todos") === null){
         todos = [];
     }else{
         todos = JSON.parse(localStorage.getItem("todos"));
     }    
-        todos.forEach(function(todo){
+        todos.forEach(function(todo) {
         const todoDiv = document.createElement("div");
         todoDiv.classList.add("todo");
 
@@ -121,9 +121,9 @@ function getTodos(){
     });
 }
 
-function removeLocalTodos(todo){
+function removeLocalTodos(todo) {
     let todos;
-    if(localStorage.getItem("todos") === null){
+    if(localStorage.getItem("todos") === null) {
         todos = [];
     }else{
         todos = JSON.parse(localStorage.getItem("todos"));
