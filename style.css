@@ -24,6 +24,11 @@ form{
     align-items: center;
 }
 
+::placeholder{
+    font-size: medium;
+    align-items: center;
+}
+
 form input, 
 form button{
     padding: 0.5rem;
